@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- For icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Marmeto Logo" class="logo">
+                <span class="text"><b>Marmeto</b></span>
+            </div>            
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <span class="material-icons">search</span>
+                <span class="material-icons">favorite_border</span>
+                <span class="material-icons">shopping_cart</span>
+            </div>
+        </nav>
+    
+        <section class="cart-section">
+            <div class="cart-header"></div>
+            <span class="textBg">
+                <img src="logo.png" alt="Marmeto Logo" class="logo_cart">
+                <h1>Cart</h1>
+                <p><b>Home</b> &gt; Cart</p>
+            </span>
+        </section>
+
+        <section class="cart-container">
+            <!-- Cart Product Table -->
+            <div class="cart-products">
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- Empty <th> for the product image column -->
+                            <th></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <!-- Empty <th> for the delete button column -->
+                            <th></th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <!-- Empty <td> for product image column in the first row -->
+                            <td> 
+                                <div class="product-image">
+                                    <img src="/sofa.png" alt="Asgaard sofa">
+                                </div>
+                            </td>
+
+                            <td >
+                                <span style="color:grey;">Asgaard sofa</span>
+                            </td>
+                            <td style="color:grey;"></td>
+                            <td>
+                                <input type="text" value="1" min="1">
+                            </td>
+                            <td></td>
+                            <!-- Empty <td> for delete button column in the first row -->
+                            <td><span class="delete-icon"><i class="fas fa-trash-alt"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+    
+            <!-- Cart Totals Section -->
+            <div class="cart-totals">
+                <h2>Cart Totals</h2>
+                <ul>
+                    <li><span style ="font-size:14px;">Subtotal</span><span style= "color: grey; font-size:14px; "></span></li><br>
+                    <li><span>Total</span><span class="total-price"></span></li>
+                </ul>
+                <button class="checkout-btn">Check Out</button>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-item">
+                    <i class="fas fa-trophy"></i>
+                    <div class="footer-text">
+                        <h3>High Quality</h3>
+                        <p>crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="footer-text">
+                        <h3>Warranty Protection</h3>
+                        <p>Over 2 years</p>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div class="footer-text">
+                        <h3>Free Shipping</h3>
+                        <p>Order over 150 $</p>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-headset"></i>
+                    <div class="footer-text">
+                        <h3>24 / 7 Support</h3>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

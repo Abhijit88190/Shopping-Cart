@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Aligns logo and text vertically */
+}
+
+
+.logo {
+  height: auto;
+  width: 80px; /* Adjust the size of your logo image */
+  
+}
+
+.text {
+  font-size: 34px; /* Adjust font size */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #333; 
+}
+
+.icons {
+  margin-left: 5px;
+  margin-right: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.icons .material-icons {
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icons .material-icons:hover {
+  color: #333; 
+}
+
+/* Cart Section Styling */
+.cart-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('background.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 50px 0; /* Adjust padding as needed */
+  background-color: #f8f8f8; /* Optional background color */
+  text-align: center;
+}
+
+.cart-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(background-image.jpg); /* Replace with your image */
+  background-color: #f3f1f1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); /* Blur effect on the background */
+  z-index: 1; /* Behind the text */
+}
+
+.textBg {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 5; /* Ensure it's above the blurred background */
+  text-align: center;
+  background:transparent; /* Optional: Transparent background for better readability */
+  gap: 5px;
+}
+
+.logo_cart
+{
+  height: 100px;
+  width: 100px;
+  gap: 0px;
+}
+
+.textBg h1 {
+  font-family:sans-serif;
+  font-size: 45px;
+  color: #333;
+}
+
+.textBg p {
+  font-size: 14px;
+  color: black;
+}
+
+/* Cart Layout */
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 400px;
+  margin: 50px auto; /* Add space above and below the cart container */
+  padding: 20px 40px; /* Add some padding for inner spacing */
+}
+
+/* Cart Products Table */
+
+.cart-products {
+  width: 67%;
+}
+
+table {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0px 0px white;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 0px solid #ddd;
+}
+
+th {
+  background-color: #f7efe2;
+  font-weight: bold;
+  width: 15%; /* You can adjust this value based on the design */
+}
+
+thead th:first-child,
+thead th:last-child {
+  width: 5%; /* Smaller width for image and delete button columns */
+}
+
+/* Align content and style product info */
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-image img { 
+    width: 100px;
+    height: 100px;
+    margin-top: 35px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 8px;
+    background-color: #f7efe2;
+}
+
+/* Styling for Quantity input */
+input[type="number"] {
+  width: 40px;
+  padding: 8px 3px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Styling the delete icon */
+.delete-icon {
+  color: #c9a855;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: #e57373;
+}
+
+
+/* Cart Totals Section */
+.cart-totals {
+  width: 30%;
+  padding: 25px;
+  background-color: #f7efe2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.cart-totals h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cart-totals ul {
+  list-style: none;
+  padding: 0px 60px;
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 20px;
+}
+
+.cart-totals ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+  gap: 50px;
+  row-gap: 20px;
+}
+
+.total-price {
+  color: #d57a22;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.checkout-btn  {
+  height: 20%;
+  width: 60%;
+  padding: 20px 10px ;
+  background-color: #fdf4e3;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.checkout-btn:hover {
+  background-color:  #e8e2d8;
+  color: #333;
+}
+
+.site-footer {
+  background-color: #fdf4e8;  /* Matches the beige background */
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;  /* Spreads items evenly */
+  align-items: center;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: #333;
+  padding: 10px 20px;  /* Adds some padding around each item */
+}
+
+.footer-item i {
+  font-size: 40px;  /* Slightly larger icons */
+  margin-right: 15px;
+  color: #333;  /* Icon color to match the image */
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-text h3 {
+  font-size: 1.2em;  /* Matches font size */
+  font-weight: 600;  /* Slightly bolder for heading */
+  margin: 0;
+  color: #333;
+}
+
+.footer-text p {
+  font-size: 0.9em;  /* Matches smaller text font */
+  color: #999;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+/* Tablet Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+
+  .icons {
+    margin-top: 10px;
+  }
+
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .cart-products, .cart-totals {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .cart-products table {
+    font-size: 14px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .icons {
+    gap: 20px;
+  }
+
+  .cart-section {
+    height: 200px;
+    padding: 20px;
+  }
+
+  .textBg h1 {
+    font-size: 30px;
+  }
+
+  .cart-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cart-products {
+    width: 100%;
+  }
+
+  table, th, td {
+    padding: 8px;
+  }
+
+  .product-image img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cart-totals {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .cart-totals h2 {
+    font-size: 20px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-item {
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-text h3, .footer-text p {
+    font-size: 0.9em;
+  }
+}
